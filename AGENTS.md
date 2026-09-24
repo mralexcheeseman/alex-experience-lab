@@ -1,12 +1,12 @@
 # Agent instructions — Alex Experience Lab
 
 ## Source of truth
-Before substantial work, read `PROJECT.md`, `README.md`, this file, and the active experiment brief.
+Before substantial work, read `PROJECT.md`, `docs/INDEX.md`, `README.md`, this file, and the active experiment/specimen brief. If third-party components or patterns are involved, also read `docs/source-registry.md`.
 
 `PROJECT.md` contains the literal original objective and current scope. Do not reinterpret that objective into a new narrative direction without updating GitHub first.
 
 ## Objective
-Curate, combine and evaluate exceptional React / motion / WebGL primitives to create exquisite interactive experiences and a reusable `alex-ui` system.
+Curate, deconstruct, faithfully rebuild, and only later combine exceptional React / motion / WebGL primitives to create exquisite interactive experiences and a reusable `alex-ui` system.
 
 The goal is not maximum animation. The goal is a repeatable, high-quality design system learned through real experimentation.
 

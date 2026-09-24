@@ -17,38 +17,41 @@ This is the core objective. Do not replace it with an unrelated narrative concep
 ## Operating model
 
 ### 1. References
-Study popular and award-winning sites. Record:
+Study user-selected and cutting-edge sites. Record:
 - what the interaction actually does
-- why it feels premium
+- what Alex explicitly likes and dislikes
+- why it feels premium or generic
 - what technical pattern is underneath it
 - what is reusable
 - what should not be copied
 
-### 2. Source registry
-Track component / primitive sources such as:
-- Motion Primitives
-- React Bits
-- Aceternity UI
-- 21st.dev discoveries
-- shadcn/ui
-- bespoke R3F / shader work
-
-For every source, record licensing constraints before code is adopted.
-
-### 3. Forge
-The main R&D environment.
+### 2. Specimen Library
+Recreate approved elements faithfully and in isolation.
 
 Purpose:
-- audition primitives
-- combine a small number of them on a live stage
-- compare variants
-- learn which combinations feel coherent
-- create repeatable recipes
+- preserve the interaction/visual behaviour that made the reference interesting
+- learn the technical pattern
+- review it independently
+- document provenance/licensing
+- avoid premature combinations
 
-The Forge should itself feel exquisite. It is not a dashboard.
+Current rule:
+Do not combine specimens until the first 20-site deconstruction pass is complete and we have at least 5–8 explicitly approved specimens.
+
+### 3. Design synthesis / Forge
+Only after the evidence-gathering phase.
+
+Purpose:
+- combine approved specimens/principles
+- use a design workflow/skill to create original compositions
+- compare variants
+- prevent component soup
+- create named, repeatable recipes
+
+The Forge is not an active design direction yet. It is a later synthesis environment.
 
 ### 4. Experiments
-Focused compositions produced from Forge primitives.
+Focused compositions produced from approved principles/specimens.
 
 An experiment should answer a specific design question and create reusable learning.
 
@@ -62,7 +65,7 @@ Promotion requires:
 - reduced-motion behaviour
 - accessibility where relevant
 - acceptable performance
-- clear licensing status
+- clear licensing/provenance status
 - enough reuse value to justify maintenance
 
 ## Design standard
@@ -153,7 +156,7 @@ For each approved reference:
 ## Current approved specimens
 
 ### 001 — Pixel Stars
-Status: active build.
+Status: rendered on branch `specimens-user-references-001`; under review in PR #5; not yet merged.
 
 Defining behaviour:
 - deliberately low 16fps rendering
@@ -169,7 +172,10 @@ Licence:
 not yet established; treat as usable inside this private project but do not redistribute through Alex UI until provenance/licensing is known.
 
 ### 002 — Sparkles
-Status: queued.
+Status: rendered on branch `specimens-user-references-001`; under review in PR #5; not yet merged.
+
+Implementation note:
+The supplied tsParticles-based composition was recreated with a native canvas implementation after the pasted wrapper proved incompatible with the current build. Preserve the visible behaviour, not the brittle dependency.
 
 Defining behaviour:
 - dense tsParticles star/spark field
@@ -237,3 +243,34 @@ Purpose:
 - record pros, cons, what works, why it works, what fails, and what should be learned rather than copied
 - identify the smallest rebuild candidate from each site
 - leave combination decisions until the first deconstruction pass is complete
+
+
+## Current working artifacts
+
+### Canonical project index
+- `docs/INDEX.md`
+
+### 20-site inspiration cohort
+- `docs/references/cutting-edge-20.md`
+
+### Website deconstruction workbook
+- Google Doc: https://docs.google.com/document/d/1yVG2C4ZTFqdBiSPXeWU4zfObvF1hpHA3J2gN4zwibcE/edit
+- Purpose: capture Alex's likes/dislikes, scores, pros/cons, what works and why, rebuild candidates, and final KEEP / MAYBE / NO verdicts.
+
+### Active specimen implementation
+- Branch: `specimens-user-references-001`
+- PR: https://github.com/mralexcheeseman/alex-experience-lab/pull/5
+- Contains Pixel Stars + Sparkles plus shadcn-compatible specimen infrastructure.
+- Do not merge until visual/mobile/provenance review is complete.
+
+## Immediate next objective
+
+Complete the 20-site deconstruction and build the user-approved specimen library.
+
+Do **not**:
+- invent a new overarching visual style yet
+- combine specimens prematurely
+- return to Archive/Forge v1 aesthetics
+- treat technical novelty as design quality
+
+Only after the first deconstruction pass should we use a design workflow to synthesise approved ingredients into original directions.

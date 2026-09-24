@@ -257,54 +257,59 @@ What to inspect:
 Candidate rebuild:
 A procedural living-field background.
 
-## 16 — Pioneer — Corn. Revolutionized.
-Reference/live URL: https://cornrevolution.resn.global/
+## 16 — Sea Breeze
+URL: https://seabreeze.az/
+Maker: Vide Infra
 
 Primary lesson:
-Complex scientific/process information translated into a simple scroll-controlled visual transformation.
+Use a live 3D map and cinematic media to sell a place before the visitor has made a rational decision.
 
 What to inspect:
-- genetics → seed → plant → harvest sequence
-- parallax
-- CGI asset strategy
-- skimmer-friendly content
-- mobile-first adaptation
+- live WebGL city/map
+- atmospheric motion: sea, clouds, birds
+- transitions from aerial/city-scale view to property/story content
+- image unfolding on scroll
+- luxury positioning without conventional luxury-site tropes
+- performance balance
 
 Candidate rebuild:
-A continuous visual transformation tied to scroll.
+A live map / environment specimen with subtle ambient movement and editorial overlays.
 
-## 17 — Xbox Museum
-Reference: https://museum.xbox.com/
-Maker: Active Theory
+## 17 — Every Neuron, Every Connection
+URL: https://www.everyneuron.com/
+Maker: Federico Guardabrazo
 
 Primary lesson:
-Turn a chronology/archive into a navigable place.
+Real scientific data can become both the content and the visual language.
 
 What to inspect:
-- six 3D environments
-- avatars
-- spatial timeline
-- linear companion navigation
-- personalised museum
-- content placement tied to chronology
+- tens of thousands of real cells rendered live in-browser
+- guided narrative before free exploration
+- transition from explanation to explorer
+- data-driven geometry rather than illustration
+- information hierarchy around a very dense scene
 
 Candidate rebuild:
-A spatial timeline with a conventional fallback/navigation layer.
+A data-to-geometry explorer where the visual is generated from real structured data.
 
-## 18 — Active Theory Experiments Hub
-Reference: https://xr.activetheory.net/
+## 18 — Miu Miu — 2026 Bag Campaign
+URL: https://immersivebags.miumiu.com/
+Maker: Merci-Michel
 
 Primary lesson:
-Treat experiments as a visible R&D capability, not hidden prototypes.
+Luxury product discovery can become an explorable environment rather than a product grid.
 
 What to inspect:
-- how experiments are presented
-- how technical novelty is contextualised
-- relationship between studio identity and R&D
-- navigation between unrelated experiments
+- spatial navigation
+- object interaction
+- high-fidelity product imagery
+- minimal UI
+- transition from environment to product detail
+- mobile treatment
+- how luxury restraint survives technically ambitious interaction
 
 Candidate rebuild:
-A cleaner pattern for our own Experience Lab specimen/experiment browsing.
+An explorable product-room specimen with one or two interactive objects.
 
 ## 19 — Palmo Coconut Co.
 URL: https://www.palmo.co.in/

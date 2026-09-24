@@ -1,5 +1,9 @@
 # Agent instructions — Alex Experience Lab
 
+## Source of truth
+Before substantial work, read `PROJECT.md`, `README.md`, this file, and the active experiment brief under `docs/`. If instructions conflict, preserve the original objective in `PROJECT.md` and update GitHub before changing direction.
+
+
 ## Objective
 Create authored, editorial, high-end interactive web experiences. The goal is not maximum animation; the goal is memorable art direction with disciplined interaction.
 

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useId, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, SingleOrMultiple } from "@tsparticles/engine";
+import type { Container, ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { motion, useAnimation } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -163,7 +163,7 @@ export const SparklesCore = ({
                 close: true,
                 fill: true,
                 options: {},
-                type: {} as SingleOrMultiple<string> | undefined,
+                type: {} as never,
               },
               groups: {},
               move: {
@@ -432,7 +432,7 @@ export const SparklesCore = ({
               },
             },
             detectRetina: true,
-          }}
+          } as unknown as ISourceOptions}
         />
       )}
     </motion.div>

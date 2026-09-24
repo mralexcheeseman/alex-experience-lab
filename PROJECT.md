@@ -122,47 +122,71 @@ Status: failed / closed.
 Reason: drifted from original objective into generic cinematic WebGL narrative.
 Keep technical learnings only. Do not reuse its visual language.
 
-### 003 replacement — Forge
-Status: active next direction.
+### 003 — Forge v1
+Status: failed / closed.
 
-Core interaction:
-**select / combine / feel the result**
+Reason:
+It still invented primitives before we had enough user-approved references. The shell may be useful later, but the order was wrong.
 
-The visitor should be able to audition a small set of primitives and see them interact on one authored stage.
+### Active direction — Specimen Library
+Status: active.
 
-## Forge v1 scope
+Core method:
+**recreate first → understand → classify → combine later**
 
-Build only these systems first:
+The user supplies examples they genuinely like. We implement each faithfully as a standalone specimen, preserve the behaviour that creates its character, and document source/licence/technical notes.
 
-1. **Specimen rail**
-   A restrained set of selectable primitives.
+Only after we have a meaningful set of approved specimens should we use a design workflow to combine them into original compositions.
 
-2. **Live stage**
-   One central composition, not a component grid.
+## Specimen workflow
 
-3. **Combination rules**
-   Maximum three active primitives at a time.
-   The system should prevent visual soup.
+For each approved reference:
 
-4. **Source metadata**
-   Each primitive records source, licence, purpose and notes.
+1. preserve the defining interaction / visual behaviour
+2. build it standalone under `/specimens`
+3. put reusable implementation in `/components/ui` or the appropriate primitive folder
+4. record source and licensing status
+5. record what makes it distinctive
+6. record what is reusable vs what is reference-specific
+7. do not combine it with other specimens yet
 
-5. **Recipes**
-   A combination can be named and saved in code as a reusable composition recipe.
+## Current approved specimens
 
-6. **Benchmark notes**
-   Every primitive should link back to the interaction principle that justified it.
+### 001 — Pixel Stars
+Status: active build.
 
-## First primitive set
+Defining behaviour:
+- deliberately low 16fps rendering
+- reduced 16-bit colour palette
+- large grid-snapped pixel stars
+- discrete twinkle states
+- intermittent pixelated shooting stars and trails
 
-- kinetic typography
-- cursor / magnetic field
-- image trail or image displacement
-- depth / parallax plane
-- shader / procedural field
-- scene / page transition
+Source:
+user-provided component code.
 
-Do not add all at once. Build the Forge shell first, then add primitives one by one.
+Licence:
+not yet established; treat as usable inside this private project but do not redistribute through Alex UI until provenance/licensing is known.
+
+### 002 — Sparkles
+Status: queued.
+
+Defining behaviour:
+- dense tsParticles star/spark field
+- subtle opacity animation
+- clean hero treatment
+
+Source:
+user-provided component code.
+
+Licence:
+not yet established; verify provenance before redistribution.
+
+## Combination rule
+
+Do not combine specimens until at least 5–8 user-approved examples exist and we have classified the underlying patterns.
+
+At that point use a design workflow to compose a new direction from the approved ingredients rather than inventing one from scratch.
 
 ## Drift test
 

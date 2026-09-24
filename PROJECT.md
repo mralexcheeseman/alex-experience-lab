@@ -224,3 +224,16 @@ Purpose:
 - identify explicit user likes and dislikes
 - rebuild only the smallest valuable mechanics as specimens
 - do not combine directions until the first deconstruction pass is complete
+
+
+## Website deconstruction workbook
+
+Google Doc:
+https://docs.google.com/document/d/1yVG2C4ZTFqdBiSPXeWU4zfObvF1hpHA3J2gN4zwibcE/edit
+
+Purpose:
+- capture Alex's explicit likes and dislikes across the 20-site cohort
+- score originality, visual system, typography, motion, interaction, usability, 3D/shader value, mobile, performance and rebuild value
+- record pros, cons, what works, why it works, what fails, and what should be learned rather than copied
+- identify the smallest rebuild candidate from each site
+- leave combination decisions until the first deconstruction pass is complete

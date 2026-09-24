@@ -18,8 +18,9 @@ const studies = [
   },
   {
     index: "03",
-    title: "Rhythm",
-    copy: "Motion that explains hierarchy instead of decorating it.",
+    title: "Forge",
+    copy: "Select, combine and evaluate reusable interaction primitives.",
+    href: "/forge",
   },
 ];
 

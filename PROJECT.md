@@ -212,3 +212,15 @@ GitHub is canonical for:
 - promotion decisions
 
 Vercel is the preview/deployment layer, not project memory.
+
+
+## Cutting-edge website cohort
+
+Canonical research cohort:
+- `docs/references/cutting-edge-20.md`
+
+Purpose:
+- deconstruct 20 current / benchmark interactive websites
+- identify explicit user likes and dislikes
+- rebuild only the smallest valuable mechanics as specimens
+- do not combine directions until the first deconstruction pass is complete

@@ -70,7 +70,9 @@ function ArchiveObject() {
 
   useFrame(({ pointer }) => {
     const p = pageProgress();
-    const threshold = smoothSceneGate(p, 0.34, 0.49);
+    const thresholdIn = smoothSceneGate(p, 0.34, 0.49);
+    const returnToOrigin = smoothSceneGate(p, 0.82, 0.94);
+    const threshold = thresholdIn * (1 - returnToOrigin);
     const approach = smoothSceneGate(p, 0.08, 0.33);
 
     material.uniforms.uThreshold.value = threshold;
@@ -165,12 +167,14 @@ function MemoryFragment({
     const p = pageProgress();
     const start = 0.5 + index * 0.085;
     const reveal = smoothSceneGate(p, start, start + 0.08);
+    const returnToOrigin = smoothSceneGate(p, 0.82, 0.94);
+    const presence = reveal * (1 - returnToOrigin);
 
     if (group.current) {
-      group.current.visible = reveal > 0.001;
-      group.current.scale.setScalar(0.78 + reveal * 0.22);
+      group.current.visible = presence > 0.001;
+      group.current.scale.setScalar(0.78 + presence * 0.22);
       group.current.position.y =
-        position[1] + (1 - reveal) * (index % 2 === 0 ? 0.7 : -0.7);
+        position[1] + (1 - presence) * (index % 2 === 0 ? 0.7 : -0.7);
     }
   });
 

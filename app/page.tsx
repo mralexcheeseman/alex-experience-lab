@@ -18,8 +18,9 @@ const studies = [
   },
   {
     index: "03",
-    title: "Rhythm",
-    copy: "Motion that explains hierarchy instead of decorating it.",
+    title: "The Archive",
+    copy: "A cinematic spatial archive: approach, enter, pass through.",
+    href: "/experience/003-archive",
   },
 ];
 

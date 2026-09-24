@@ -1,5 +1,14 @@
 # Alex Experience Lab
 
+## Start here
+
+Before substantial work, read:
+- `PROJECT.md` — canonical objective, active phase and anti-drift rules
+- `docs/INDEX.md` — canonical map of research, specimens, working documents and status
+- `AGENTS.md` — implementation rules
+
+GitHub is the project source of truth. Vercel is the preview/deployment layer.
+
 A living laboratory for exquisite digital experiences — not a template library.
 
 ## North star

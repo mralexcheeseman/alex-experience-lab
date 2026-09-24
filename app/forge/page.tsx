@@ -6,6 +6,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
+  type MotionValue,
 } from "motion/react";
 import { useMemo, useState } from "react";
 import styles from "./forge.module.css";
@@ -56,6 +57,35 @@ const primitives: Primitive[] = [
   },
 ];
 
+function KineticLetter({
+  letter,
+  index,
+  active,
+  sx,
+  sy,
+}: {
+  letter: string;
+  index: number;
+  active: boolean;
+  sx: MotionValue<number>;
+  sy: MotionValue<number>;
+}) {
+  const factor = (index - 2) * 0.7;
+  const x = useTransform(sx, [-1, 1], [-14 * factor, 14 * factor]);
+  const y = useTransform(sy, [-1, 1], [8 * factor, -8 * factor]);
+  const rotate = useTransform(
+    sx,
+    [-1, 1],
+    [-1.8 * factor, 1.8 * factor],
+  );
+
+  return (
+    <motion.span style={active ? { x, y, rotate } : undefined}>
+      {letter}
+    </motion.span>
+  );
+}
+
 const recipes = [
   {
     name: "Editorial Depth",
@@ -87,6 +117,8 @@ export default function ForgePage() {
   const stageRotateY = useTransform(sx, [-1, 1], [-3.2, 3.2]);
   const lensX = useTransform(sx, [-1, 1], ["18%", "82%"]);
   const lensY = useTransform(sy, [-1, 1], ["18%", "82%"]);
+  const planeBX = useTransform(sx, [-1, 1], [28, -28]);
+  const planeBY = useTransform(sy, [-1, 1], [18, -18]);
 
   const activeSet = useMemo(() => new Set(active), [active]);
 
@@ -187,29 +219,16 @@ export default function ForgePage() {
             </div>
 
             <div className={styles.word}>
-              {"FORGE".split("").map((letter, index) => {
-                const factor = (index - 2) * 0.7;
-                const x = useTransform(sx, [-1, 1], [-14 * factor, 14 * factor]);
-                const y = useTransform(sy, [-1, 1], [8 * factor, -8 * factor]);
-                const rotate = useTransform(
-                  sx,
-                  [-1, 1],
-                  [-1.8 * factor, 1.8 * factor],
-                );
-
-                return (
-                  <motion.span
-                    key={letter + index}
-                    style={
-                      activeSet.has("type")
-                        ? { x, y, rotate }
-                        : undefined
-                    }
-                  >
-                    {letter}
-                  </motion.span>
-                );
-              })}
+              {"FORGE".split("").map((letter, index) => (
+                <KineticLetter
+                  key={letter + index}
+                  letter={letter}
+                  index={index}
+                  active={activeSet.has("type")}
+                  sx={sx}
+                  sy={sy}
+                />
+              ))}
             </div>
 
             <p className={styles.stageCopy}>
@@ -229,10 +248,7 @@ export default function ForgePage() {
               </motion.div>
               <motion.div
                 className={`${styles.plane} ${styles.planeB}`}
-                style={{
-                  x: useTransform(sx, [-1, 1], [28, -28]),
-                  y: useTransform(sy, [-1, 1], [18, -18]),
-                }}
+                style={{ x: planeBX, y: planeBY }}
               >
                 <span>DEPTH / B</span>
                 <b>02</b>

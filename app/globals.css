@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #ece9e1;
+  --ink: #11100f;
+  --line: rgba(17,16,15,.18);
+  --muted: rgba(17,16,15,.62);
+  --mx: 50vw;
+  --my: 50vh;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(500px circle at var(--mx) var(--my), rgba(255,255,255,.38), transparent 45%),
+    var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+main { overflow: clip; }
+.shell { width: min(1500px, calc(100% - 48px)); margin: 0 auto; }
+.hero { min-height: 100svh; padding: 28px 0 24px; display: flex; flex-direction: column; }
+.eyebrow-row,.section-head { display:flex; justify-content:space-between; gap:24px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; border-bottom:1px solid var(--line); padding-bottom:14px; }
+.hero-grid { flex:1; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr); align-items:center; gap:48px; }
+h1 { margin:0; font-weight:500; letter-spacing:-.065em; line-height:.88; font-size:clamp(72px,11vw,190px); max-width:9ch; }
+h1 span { display:block; font-family: Georgia, 'Times New Roman', serif; font-style:italic; font-weight:400; letter-spacing:-.07em; }
+.lede { margin:40px 0 0; max-width:560px; font-size:clamp(18px,1.6vw,26px); line-height:1.3; color:var(--muted); }
+.orb-wrap { position:relative; min-height:520px; display:grid; place-items:center; }
+.orb { width:min(27vw,420px); aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 34% 28%, #fff 0 4%, #d8d5cc 14%, #75726b 43%, #171614 74%, #060605 100%); box-shadow: inset -45px -60px 100px rgba(0,0,0,.4), 0 50px 120px rgba(0,0,0,.23); }
+.orb-ring { position:absolute; border:1px solid rgba(17,16,15,.22); border-radius:50%; width:78%; aspect-ratio:1; }
+.ring-one { transform:rotateX(70deg) rotateZ(14deg); }
+.ring-two { width:96%; opacity:.45; transform:rotateY(72deg) rotateZ(-10deg); }
+.scroll-note { font-size:10px; letter-spacing:.2em; }
+.statement { min-height:100svh; display:grid; grid-template-columns:180px 1fr; align-content:center; gap:40px; border-top:1px solid var(--line); }
+.kicker { margin:0; font-size:10px; letter-spacing:.22em; text-transform:uppercase; }
+.manifesto { margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:clamp(52px,7.5vw,124px); line-height:.98; letter-spacing:-.055em; max-width:10.5ch; }
+.studies { padding:140px 0; }
+.study-list { margin-top:34px; }
+.study { min-height:180px; display:grid; grid-template-columns:80px minmax(220px,.8fr) 1fr 48px; align-items:center; gap:24px; border-bottom:1px solid var(--line); }
+.study h2 { margin:0; font-size:clamp(44px,6vw,92px); font-weight:500; letter-spacing:-.055em; }
+.study p { max-width:420px; color:var(--muted); font-size:18px; line-height:1.45; }
+.study-index { font:italic 24px Georgia, serif; }
+.arrow { font-size:28px; }
+.closing { min-height:82svh; display:grid; grid-template-columns:1fr .8fr; align-items:end; padding:110px 0 40px; border-top:1px solid var(--line); }
+.closing-copy h2 { font:400 clamp(56px,8vw,130px)/.92 Georgia, serif; letter-spacing:-.06em; margin:28px 0; max-width:8ch; }
+.closing-copy > p:last-child { max-width:520px; color:var(--muted); font-size:18px; line-height:1.45; }
+.monogram { justify-self:end; align-self:end; font-size:clamp(160px,28vw,460px); line-height:.72; letter-spacing:-.11em; font-weight:700; opacity:.08; transform:translateX(3%); }
+
+@media (max-width: 900px) {
+  .shell { width:min(100% - 28px, 760px); }
+  .hero-grid { grid-template-columns:1fr; padding:90px 0 70px; }
+  .orb-wrap { min-height:360px; order:-1; }
+  .orb { width:min(66vw,360px); }
+  .statement { grid-template-columns:1fr; align-content:center; gap:36px; }
+  .study { grid-template-columns:46px 1fr 28px; padding:30px 0; }
+  .study p { grid-column:2 / -1; margin:0 0 4px; }
+  .closing { grid-template-columns:1fr; }
+  .monogram { margin-top:100px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}

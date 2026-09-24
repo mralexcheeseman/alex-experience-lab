@@ -44,6 +44,43 @@ h1 span { display:block; font-family: Georgia, 'Times New Roman', serif; font-st
 .study p { max-width:420px; color:var(--muted); font-size:18px; line-height:1.45; }
 .study-index { font:italic 24px Georgia, serif; }
 .arrow { font-size:28px; }
+.research {
+  padding: 120px 0 160px;
+  border-top: 1px solid var(--line);
+}
+.research-link {
+  position: relative;
+  display: block;
+  margin-top: 42px;
+  color: inherit;
+  text-decoration: none;
+  font-size: clamp(72px, 11vw, 176px);
+  font-weight: 500;
+  line-height: .78;
+  letter-spacing: -.07em;
+}
+.research-link em {
+  display: block;
+  margin-left: 12vw;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.research-link b {
+  position: absolute;
+  right: 0;
+  bottom: .08em;
+  font-size: .26em;
+  letter-spacing: 0;
+}
+.research > p:last-child {
+  max-width: 580px;
+  margin: 48px 0 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .closing { min-height:82svh; display:grid; grid-template-columns:1fr .8fr; align-items:end; padding:110px 0 40px; border-top:1px solid var(--line); }
 .closing-copy h2 { font:400 clamp(56px,8vw,130px)/.92 Georgia, serif; letter-spacing:-.06em; margin:28px 0; max-width:8ch; }
 .closing-copy > p:last-child { max-width:520px; color:var(--muted); font-size:18px; line-height:1.45; }
@@ -57,6 +94,8 @@ h1 span { display:block; font-family: Georgia, 'Times New Roman', serif; font-st
   .statement { grid-template-columns:1fr; align-content:center; gap:36px; }
   .study { grid-template-columns:46px 1fr 28px; padding:30px 0; }
   .study p { grid-column:2 / -1; margin:0 0 4px; }
+  .research-link em { margin-left:0; }
+  .research > p:last-child { margin-left:0; }
   .closing { grid-template-columns:1fr; }
   .monogram { margin-top:100px; }
 }

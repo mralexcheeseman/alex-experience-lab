@@ -63,7 +63,16 @@ Current first-cohort signals:
 4. restraint creates perceived quality
 
 ### 003 — The Archive
-Status: active.
+Status: active on `experience-003-archive`.
+
+Current implementation:
+- canonical source-of-truth guardrail added
+- reusable scene timing primitive added
+- deterministic scroll camera path added
+- bespoke multi-part archive object with authored shader added
+- approach → surface → threshold → three-fragment interior → editorial resolution → return loop implemented
+- desktop WebGL and designed mobile/reduced-motion fallback implemented
+- pending visual review before merge
 
 Canonical brief:
 - `docs/experience-003-the-archive.md`
@@ -132,3 +141,15 @@ Before any substantial change, ask:
 5. Is the decision recorded in GitHub?
 
 If two or more answers are "no", do not add it.
+
+
+## Active review checkpoint — 003 first build
+
+Do not merge 003 to `main` until:
+- Vercel preview is build-clean
+- the threshold moment is visually reviewed on desktop
+- the mobile fallback is reviewed
+- the final return-to-object loop is confirmed
+- obvious performance regressions are ruled out
+
+This checkpoint exists to prevent technical completion being mistaken for aesthetic completion.

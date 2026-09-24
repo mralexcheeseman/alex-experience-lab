@@ -1,0 +1,487 @@
+.page {
+  min-height: 100vh;
+  background: #efede6;
+  color: #10100f;
+}
+
+.topbar,
+.hero,
+.doctrine,
+.filters,
+.grid,
+.synthesis,
+.next {
+  width: min(1500px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0 14px;
+  border-bottom: 1px solid rgba(16, 16, 15, 0.2);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.homeLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 92svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 110px 0 42px;
+}
+
+.heroLabel {
+  margin-bottom: 32px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 7ch;
+  font-size: clamp(88px, 14vw, 230px);
+  font-weight: 500;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+}
+
+.hero h1 em {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.heroFooter {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+  margin-top: 54px;
+}
+
+.heroFooter > p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(16, 16, 15, 0.64);
+  font-size: clamp(18px, 1.7vw, 26px);
+  line-height: 1.36;
+}
+
+.count {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.count span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 72px;
+  line-height: 0.8;
+}
+
+.count small {
+  max-width: 90px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+}
+
+.doctrine {
+  min-height: 72svh;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 52px;
+  align-content: center;
+  border-top: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.doctrine > p,
+.synthesis > p,
+.next > p:first-child {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.doctrine h2 {
+  max-width: 9ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 8vw, 126px);
+  font-weight: 400;
+  line-height: 0.93;
+  letter-spacing: -0.055em;
+}
+
+.doctrine div > p {
+  max-width: 620px;
+  margin: 34px 0 0;
+  color: rgba(16, 16, 15, 0.62);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 16px 0;
+  background: rgba(239, 237, 230, 0.94);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(16, 16, 15, 0.2);
+  border-bottom: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.filters button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  border: 1px solid rgba(16, 16, 15, 0.22);
+  background: transparent;
+  padding: 10px 13px;
+  color: inherit;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filters button span {
+  opacity: 0.52;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.activeFilter {
+  background: #111 !important;
+  color: #efede6 !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px 0 160px;
+}
+
+.card {
+  min-height: 760px;
+  display: grid;
+  grid-template-rows: auto 330px 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(16, 16, 15, 0.16);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 17px;
+  border-bottom: 1px solid currentColor;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid currentColor;
+}
+
+.art span {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(150px, 19vw, 300px);
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: -0.1em;
+  opacity: 0.18;
+}
+
+.artRing,
+.artRingTwo {
+  position: absolute;
+  width: 54%;
+  aspect-ratio: 1;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.34;
+}
+
+.artRing {
+  transform: rotateX(68deg) rotateZ(26deg);
+}
+
+.artRingTwo {
+  width: 76%;
+  opacity: 0.16;
+  transform: rotateY(68deg) rotateZ(-18deg);
+}
+
+.light {
+  background: #dedbd3;
+  color: #111;
+}
+
+.dark {
+  background: #121210;
+  color: #efede6;
+}
+
+.warm {
+  background: #9d684d;
+  color: #f5eee5;
+}
+
+.electric {
+  background: #2639c7;
+  color: #f0f2ff;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 28px 24px;
+}
+
+.maker {
+  margin: 0 0 10px;
+  opacity: 0.64;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cardBody h2 {
+  margin: 0;
+  max-width: 11ch;
+  font-size: clamp(46px, 5vw, 82px);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 24px;
+}
+
+.signals span {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.analysis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin-top: auto;
+  padding-top: 46px;
+}
+
+.analysis p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.78;
+}
+
+.analysis strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cardBody a {
+  align-self: flex-start;
+  margin-top: 30px;
+  color: inherit;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+}
+
+.synthesis {
+  padding: 120px 0 150px;
+  border-top: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.synthesisGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 48px;
+  border-top: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.synthesisGrid article {
+  min-height: 380px;
+  padding: 28px 34px 42px 0;
+  border-bottom: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.synthesisGrid article:nth-child(odd) {
+  border-right: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.synthesisGrid article:nth-child(even) {
+  padding-left: 34px;
+}
+
+.synthesisGrid span {
+  font: italic 20px Georgia, "Times New Roman", serif;
+  opacity: 0.5;
+}
+
+.synthesisGrid h3 {
+  max-width: 9ch;
+  margin: 76px 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5.5vw, 88px);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+
+.synthesisGrid p {
+  max-width: 480px;
+  margin: 0;
+  color: rgba(16, 16, 15, 0.64);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.next {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0;
+  border-top: 1px solid rgba(16, 16, 15, 0.2);
+}
+
+.next h2 {
+  margin: 38px 0;
+  font-size: clamp(100px, 17vw, 280px);
+  font-weight: 500;
+  line-height: 0.72;
+  letter-spacing: -0.08em;
+}
+
+.next h2 em {
+  display: block;
+  margin-left: 16vw;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.next > p:last-child {
+  align-self: flex-end;
+  max-width: 620px;
+  margin: 30px 0 0;
+  color: rgba(16, 16, 15, 0.64);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .topbar,
+  .hero,
+  .doctrine,
+  .filters,
+  .grid,
+  .synthesis,
+  .next {
+    width: min(100% - 28px, 720px);
+  }
+
+  .topbar span:last-child {
+    display: none;
+  }
+
+  .hero {
+    min-height: 86svh;
+    padding-top: 90px;
+  }
+
+  .hero h1 {
+    font-size: clamp(78px, 24vw, 150px);
+  }
+
+  .heroFooter {
+    grid-template-columns: 1fr;
+  }
+
+  .count {
+    justify-self: start;
+  }
+
+  .doctrine {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 720px;
+    grid-template-rows: auto 260px 1fr;
+  }
+
+  .analysis {
+    grid-template-columns: 1fr;
+  }
+
+  .synthesisGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .synthesisGrid article,
+  .synthesisGrid article:nth-child(odd),
+  .synthesisGrid article:nth-child(even) {
+    border-right: 0;
+    padding-left: 0;
+  }
+
+  .next h2 em {
+    margin-left: 0;
+  }
+
+  .next > p:last-child {
+    align-self: flex-start;
+  }
+}

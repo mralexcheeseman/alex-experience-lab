@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "motion/react";
+import DepthType from "../../../components/primitives/depth-type";
 import styles from "./archive.module.css";
 
 const ArchiveScene = dynamic(
@@ -85,9 +86,14 @@ export default function ArchiveExperience() {
 
       <section className={styles.scene} data-scene="02">
         <div className={styles.sceneIndex}>02 / SURFACE</div>
-        <div className={styles.surfaceType} aria-hidden="true">
-          SURFACE
-        </div>
+        <DepthType
+          className={styles.surfaceType}
+          range={[0.2, 0.38]}
+          y={[80, -40]}
+          opacity={[0.02, 0.14]}
+        >
+          <span aria-hidden="true">SURFACE</span>
+        </DepthType>
         <p className={styles.surfaceCopy}>
           Marks become metadata. Seams become chronology. Material becomes
           interface.
@@ -97,7 +103,14 @@ export default function ArchiveExperience() {
       <section className={`${styles.scene} ${styles.threshold}`} data-scene="03">
         <div className={styles.sceneIndex}>03 / THRESHOLD</div>
         <p className={styles.thresholdPre}>DO NOT OPEN</p>
-        <h2>ENTER</h2>
+        <DepthType
+          className={styles.thresholdWord}
+          range={[0.31, 0.48]}
+          y={[64, -28]}
+          opacity={[0.2, 1]}
+        >
+          <h2>ENTER</h2>
+        </DepthType>
         <p className={styles.thresholdPost}>PASS THROUGH THE OBJECT</p>
       </section>
 

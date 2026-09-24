@@ -135,6 +135,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="research shell">
+        <div className="section-head">
+          <span>RESEARCH</span>
+          <span>24 REFERENCES</span>
+        </div>
+        <Link href="/references" className="research-link">
+          <span>Reference</span>
+          <em>Observatory</em>
+          <b>↗</b>
+        </Link>
+        <p>
+          A working research system for deconstructing the strongest interactive
+          sites into principles we can test, restyle and eventually promote into
+          Alex UI.
+        </p>
+      </section>
+
       <section className="closing shell">
         <div className="closing-copy">
           <p className="kicker">NEXT</p>

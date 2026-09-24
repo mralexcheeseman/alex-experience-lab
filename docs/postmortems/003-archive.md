@@ -38,7 +38,20 @@ Do not conclude that:
 - oversized typography creates authorship
 - scroll choreography equals interaction design
 
-## Correction
+## First correction — Forge v1
 
-Replace 003 with **Forge**:
-a live component-composition environment that directly tests the original question — which React / motion / WebGL primitives can be combined into something genuinely exceptional and reusable?
+Archive was initially replaced with **Forge**, a live component-composition environment.
+
+That also failed as the immediate next step because it still invented primitives before enough user-approved reference material existed.
+
+## Current correction — specimen-first
+
+The current source-of-truth workflow is:
+
+1. collect user-approved references and cutting-edge benchmark sites
+2. deconstruct them systematically
+3. rebuild the smallest valuable mechanics as isolated specimens
+4. accumulate at least 5–8 explicitly approved specimens
+5. only then use a design workflow to combine them into original directions
+
+Do not return to either Archive or Forge v1 as a visual direction. Any future Forge should be only a synthesis environment powered by already-approved specimens.

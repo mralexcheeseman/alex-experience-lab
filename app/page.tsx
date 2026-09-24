@@ -1,13 +1,56 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 
 const studies = [
-  { index: "01", title: "Origin", copy: "A study in scale, restraint and responsive light." },
-  { index: "02", title: "Depth", copy: "Spatial composition without sacrificing clarity." },
-  { index: "03", title: "Rhythm", copy: "Motion that explains hierarchy instead of decorating it." },
+  {
+    index: "01",
+    title: "Origin",
+    copy: "A study in scale, restraint and responsive light.",
+  },
+  {
+    index: "02",
+    title: "Depth",
+    copy: "Spatial composition without sacrificing clarity.",
+    href: "/experience/002-depth",
+  },
+  {
+    index: "03",
+    title: "Rhythm",
+    copy: "Motion that explains hierarchy instead of decorating it.",
+  },
 ];
+
+function Study({
+  study,
+}: {
+  study: (typeof studies)[number];
+}) {
+  const card = (
+    <motion.article
+      className="study"
+      whileHover={{ x: 12 }}
+      transition={{ type: "spring", stiffness: 260, damping: 24 }}
+    >
+      <span className="study-index">{study.index}</span>
+      <h2>{study.title}</h2>
+      <p>{study.copy}</p>
+      <span className="arrow">↗</span>
+    </motion.article>
+  );
+
+  if (study.href) {
+    return (
+      <Link className="study-link" href={study.href}>
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
+}
 
 export default function Home() {
   const mx = useMotionValue(0.5);
@@ -38,12 +81,22 @@ export default function Home() {
 
         <div className="hero-grid">
           <div>
-            <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}
+            >
               Make the digital
               <span>feel physical.</span>
             </motion.h1>
-            <motion.p className="lede" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35, duration: 0.8 }}>
-              A living laboratory for interfaces with weight, rhythm and atmosphere — built to become a reusable visual language.
+            <motion.p
+              className="lede"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 0.8 }}
+            >
+              A living laboratory for interfaces with weight, rhythm and
+              atmosphere — built to become a reusable visual language.
             </motion.p>
           </div>
 
@@ -77,17 +130,7 @@ export default function Home() {
         </div>
         <div className="study-list">
           {studies.map((study) => (
-            <motion.article
-              key={study.index}
-              className="study"
-              whileHover={{ x: 12 }}
-              transition={{ type: "spring", stiffness: 260, damping: 24 }}
-            >
-              <span className="study-index">{study.index}</span>
-              <h2>{study.title}</h2>
-              <p>{study.copy}</p>
-              <span className="arrow">↗</span>
-            </motion.article>
+            <Study key={study.index} study={study} />
           ))}
         </div>
       </section>
@@ -96,9 +139,14 @@ export default function Home() {
         <div className="closing-copy">
           <p className="kicker">NEXT</p>
           <h2>Turn experiments into a system.</h2>
-          <p>Only components that survive visual, mobile, accessibility and performance review graduate into Alex UI.</p>
+          <p>
+            Only components that survive visual, mobile, accessibility and
+            performance review graduate into Alex UI.
+          </p>
         </div>
-        <div className="monogram" aria-hidden="true">AC</div>
+        <div className="monogram" aria-hidden="true">
+          AC
+        </div>
       </section>
     </main>
   );

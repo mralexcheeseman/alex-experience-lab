@@ -11,8 +11,8 @@ const specimens = [
   {
     index: "002",
     name: "Sparkles",
-    status: "QUEUED",
-    href: null,
+    status: "LIVE",
+    href: "/specimens/sparkles",
     note: "Dense tsParticles field · subtle opacity motion · clean hero layer",
   },
 ];

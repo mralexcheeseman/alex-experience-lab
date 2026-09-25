@@ -87,3 +87,23 @@ Nothing in this document becomes permanent Alex UI doctrine until supported by:
 - Alex's explicit reactions
 - at least two reference examples or two successful specimens
 - a real implementation review
+
+
+## Explicit user signal — The Long View
+
+Reference:
+- `docs/references/user-approved/001-the-long-view.md`
+
+Alex explicitly described this WIP as **cool** and **in the right direction**.
+
+This is higher-confidence taste evidence than the assistant hypotheses above.
+
+Signals currently supported:
+- immersive experience before conventional interface
+- strong editorial typography
+- sparse copy
+- minimal UI chrome
+- one dominant full-screen visual field
+- deliberate transition into the experience
+
+Do not over-generalise from one WIP. Use it as an anchor and continue testing these preferences against further explicit user reactions.

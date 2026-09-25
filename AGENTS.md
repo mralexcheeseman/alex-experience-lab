@@ -42,3 +42,20 @@ Ask:
 - is this better than the reference standard, or just busier?
 
 If not, redesign the composition.
+
+
+## Build asset library
+
+Before creating or implementing a new visual / interaction primitive:
+
+1. inspect `data/library-assets.json`
+2. prefer an existing suitable asset over reinventing the same mechanic
+3. respect the asset's `status` and `build_eligibility`
+4. record asset IDs used in the experiment / PR
+5. add new source material to the registry at intake time
+6. never treat `specimen` or `candidate` assets as approved without Alex's explicit review
+
+Canonical guide:
+- `docs/library-assets.md`
+
+The asset registry is part of the project source of truth.

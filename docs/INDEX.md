@@ -178,3 +178,22 @@ No premature combination work.
 
 Next action:
 Review and classify before adding more.
+
+
+## 13. Build asset library
+
+Canonical machine-readable registry:
+- `data/library-assets.json`
+
+Human guide:
+- `docs/library-assets.md`
+
+Purpose:
+- preserve reusable elements
+- expose implementation paths and preview routes
+- track provenance/licensing
+- distinguish source/specimen/candidate/approved/alex-ui states
+- tell future builds which assets can be reused
+
+Rule:
+Every substantial new build must check this registry before inventing a new primitive and should record the asset IDs it uses.

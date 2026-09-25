@@ -216,6 +216,44 @@
         "candidate",
         "not-user-approved"
       ]
+    },
+    {
+      "id": "ALR-001",
+      "name": "The Long View / Luminary",
+      "category": [
+        "user-approved-direction",
+        "immersive-opening",
+        "editorial-typography",
+        "canvas",
+        "experience-entry"
+      ],
+      "origin": "user-built v0 / Vercel WIP",
+      "source_family": "v0 working project",
+      "source_url": "https://v0.app/mralexcheeseman-3115s-projects/chat/ctDFk8VlpHN",
+      "reference_doc": "docs/references/user-approved/001-the-long-view.md",
+      "implementation": {
+        "vercel_project": "luminary",
+        "vercel_project_id": "prj_7UoGerYOWX677TQeey279T34wcVe",
+        "live_url": "https://luminary-iota-amber.vercel.app"
+      },
+      "defining_behaviour": [
+        "full-screen immersive canvas opening",
+        "editorial typographic composition",
+        "minimal conventional UI chrome",
+        "vignette treatment",
+        "sparse framing copy",
+        "deliberate enter-experience threshold"
+      ],
+      "status": "approved",
+      "build_eligibility": "reference_only",
+      "licence": "project-owned WIP; component-level provenance not yet inventoried",
+      "reuse_rule": "Use as a direction/taste anchor. Extract specific mechanics as separately inventoried specimens before implementation reuse.",
+      "tags": [
+        "user-approved",
+        "right-direction",
+        "wip",
+        "taste-anchor"
+      ]
     }
   ]
 }

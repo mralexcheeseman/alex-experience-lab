@@ -197,3 +197,17 @@ Purpose:
 
 Rule:
 Every substantial new build must check this registry before inventing a new primitive and should record the asset IDs it uses.
+
+
+## 14. User-approved direction references
+
+### ALR-001 — The Long View / Luminary
+- reference: `docs/references/user-approved/001-the-long-view.md`
+- asset registry id: `ALR-001`
+- v0 source: https://v0.app/mralexcheeseman-3115s-projects/chat/ctDFk8VlpHN
+- Vercel project: `luminary`
+- live: https://luminary-iota-amber.vercel.app
+- status: WIP, explicitly described by Alex as "cool" and "in the right direction"
+
+Rule:
+User-approved direction references carry more weight than assistant-generated taste hypotheses.

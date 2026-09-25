@@ -157,3 +157,24 @@ Next milestone:
 - only then use a design workflow to synthesise original directions
 
 No premature combination work.
+
+
+## 12. Current staged review branches
+
+### Candidate specimens
+- branch: `candidate-specimens-batch-01`
+- PR #6: https://github.com/mralexcheeseman/alex-experience-lab/pull/6
+- status: candidate mechanics only
+
+### Synthesis directions
+- branch: `synthesis-directions-v1`
+- PR #7: https://github.com/mralexcheeseman/alex-experience-lab/pull/7
+- status: provisional combinations only
+
+### Provisional research
+- `docs/deconstructions/batch-01-provisional.md`
+- `docs/design-dna/provisional-v1.md`
+- `docs/synthesis/provisional-directions-v1.md`
+
+Next action:
+Review and classify before adding more.

@@ -274,3 +274,89 @@ Do **not**:
 - treat technical novelty as design quality
 
 Only after the first deconstruction pass should we use a design workflow to synthesise approved ingredients into original directions.
+
+
+## Four-stage execution — September 2026
+
+Alex explicitly asked to action all four stages immediately.
+
+### Stage 1 — First five deconstructions
+Status: complete as provisional assistant analysis.
+
+Canonical:
+- `docs/deconstructions/batch-01-provisional.md`
+
+Sites:
+- ORYZO AI
+- The Symphony of Vines
+- Shopify Editions Spring ’26
+- Bruno Simon
+- Every Neuron
+
+Important:
+This is not a substitute for Alex's own workbook feedback.
+
+### Stage 2 — Design DNA v1
+Status: provisional hypothesis created.
+
+Canonical:
+- `docs/design-dna/provisional-v1.md`
+
+Rule:
+No hypothesis becomes permanent doctrine until supported by Alex's explicit feedback and implementation evidence.
+
+### Stage 3 — Candidate Specimens 003–007
+Status: built on stacked review branch.
+
+Branch:
+- `candidate-specimens-batch-01`
+
+Draft PR:
+- https://github.com/mralexcheeseman/alex-experience-lab/pull/6
+
+Candidates:
+- 003 Hero Object Framing
+- 004 Chapter Interaction Engine
+- 005 Editorial Release System
+- 006 Navigable Micro-World
+- 007 Data → Geometry Explorer
+
+Rule:
+Candidate does not mean approved.
+
+### Stage 4 — Provisional Synthesis v1
+Status: three composition studies built on stacked review branch.
+
+Branch:
+- `synthesis-directions-v1`
+
+Draft PR:
+- https://github.com/mralexcheeseman/alex-experience-lab/pull/7
+
+Canonical rationale:
+- `docs/synthesis/provisional-directions-v1.md`
+
+Directions:
+- A Artifact Signal
+- B Editorial Current
+- C Field Atlas
+
+Rule:
+These were built because Alex explicitly asked to execute all four stages now. They are not the house style and must not override later taste evidence from the workbook.
+
+## Current decision gate
+
+The next decision is review, not more invention.
+
+Review:
+1. Pixel Stars + Sparkles
+2. Candidate Specimens 003–007
+3. Synthesis A/B/C
+4. First five website deconstructions
+
+Then:
+- promote
+- reshape
+- or kill
+
+Do not create additional synthesis directions until this review produces explicit signal.

@@ -360,3 +360,24 @@ Then:
 - or kill
 
 Do not create additional synthesis directions until this review produces explicit signal.
+
+
+## Build asset library rule
+
+Canonical:
+- `data/library-assets.json`
+- `docs/library-assets.md`
+
+The Lab is a working build library, not just a research archive.
+
+Before creating a new primitive:
+- search the asset registry
+- reuse or parameterise a suitable existing element where possible
+- record the asset IDs used
+- preserve status/licence restrictions
+
+Current supplied elements:
+- `ALE-001` Pixel Stars
+- `ALE-002` Sparkles
+
+They are available for **internal Lab experiments** but are not yet distributable `alex-ui` primitives because provenance/licensing is unresolved.

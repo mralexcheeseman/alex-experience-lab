@@ -381,3 +381,16 @@ Current supplied elements:
 - `ALE-002` Sparkles
 
 They are available for **internal Lab experiments** but are not yet distributable `alex-ui` primitives because provenance/licensing is unresolved.
+
+
+## Active Symphony blog direction
+
+Alex explicitly prefers The Symphony of Vines interaction model and wants a **high-fidelity recreation of its experience architecture** repurposed as a personal blog.
+
+Canonical fidelity contract:
+- `docs/briefs/symphony-blog-fidelity-contract.md`
+
+Important:
+This means high fidelity to the interaction grammar and pacing — Enter → chapters → one interaction per chapter → cinematic transitions → skip/recovery → end/restart — while using original Alex content, imagery, typography choices and visual assets.
+
+Do not reinterpret this as a generic “inspired by Symphony” landing page.

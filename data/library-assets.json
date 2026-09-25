@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "purpose": "Canonical machine-readable inventory of visual and interaction assets available to Alex Experience Lab builds.",
+  "status_model": {
+    "source": "Raw source/reference preserved; not yet rendered.",
+    "specimen": "Rendered faithfully enough to review.",
+    "candidate": "Derived reusable mechanic under evaluation.",
+    "approved": "Explicitly approved for reuse in Lab builds.",
+    "alex_ui": "Promoted, packaged and maintained reusable primitive."
+  },
+  "build_eligibility": {
+    "reference_only": "May inform design, but do not directly reuse implementation.",
+    "internal_experiments_only": "May be used in private Lab experiments; do not redistribute as alex-ui.",
+    "approved_internal": "Approved for normal Lab builds, subject to licence restrictions.",
+    "distributable": "Approved and licensed for alex-ui redistribution."
+  },
+  "assets": [
+    {
+      "id": "ALE-001",
+      "name": "Pixel Stars",
+      "category": [
+        "background",
+        "canvas",
+        "particles",
+        "retro",
+        "ambient-motion"
+      ],
+      "origin": "user-supplied source",
+      "source_family": "21st.dev-style pasted component payload",
+      "raw_source": "docs/intake/raw/2026-09-24-pixel-stars-source.txt",
+      "source_manifest": "docs/intake/2026-09-24-21st-dev-intake.md",
+      "implementation": {
+        "branch": "specimens-user-references-001",
+        "path": "components/ui/background-pixel-stars.tsx",
+        "preview_route": "/specimens/pixel-stars",
+        "pr": 5
+      },
+      "defining_behaviour": [
+        "16fps deliberate low-fidelity motion",
+        "5px grid-snapped pixel stars",
+        "restricted 16-bit-inspired palette",
+        "discrete twinkle states",
+        "pixelated shooting-star trails"
+      ],
+      "status": "specimen",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "unknown",
+      "reuse_rule": "May be reused in private Lab compositions. Do not promote or redistribute through alex-ui until provenance/licence is established or the principle is independently rebuilt.",
+      "tags": [
+        "approved-reference",
+        "strong-identity",
+        "user-liked"
+      ]
+    },
+    {
+      "id": "ALE-002",
+      "name": "Sparkles",
+      "category": [
+        "background",
+        "canvas",
+        "particles",
+        "ambient-motion",
+        "reveal"
+      ],
+      "origin": "user-supplied source",
+      "source_family": "21st.dev-style pasted component payload",
+      "raw_source": "docs/intake/raw/2026-09-24-sparkles-source.txt",
+      "source_manifest": "docs/intake/2026-09-24-21st-dev-intake.md",
+      "implementation": {
+        "branch": "specimens-user-references-001",
+        "path": "components/ui/sparkles.tsx",
+        "preview_route": "/specimens/sparkles",
+        "pr": 5
+      },
+      "defining_behaviour": [
+        "dense field of tiny particles",
+        "smooth ambient drift",
+        "animated opacity",
+        "configurable density, scale, speed and colour",
+        "narrow masked sparkle bloom",
+        "click-to-add particles"
+      ],
+      "status": "specimen",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original composition provenance unknown",
+      "reuse_rule": "Prefer the narrow masked bloom over generic full-screen particle use unless the build specifically benefits from a full field. Do not redistribute through alex-ui until provenance/licence is established or independently rebuilt.",
+      "tags": [
+        "approved-reference",
+        "user-liked",
+        "use-with-restraint"
+      ]
+    },
+    {
+      "id": "ALE-C003",
+      "name": "Hero Object Framing",
+      "category": [
+        "product-framing",
+        "pointer-response",
+        "art-direction"
+      ],
+      "origin": "derived mechanic",
+      "reference": "ORYZO AI",
+      "implementation": {
+        "branch": "candidate-specimens-batch-01",
+        "path": "components/specimens/hero-object-framing.tsx",
+        "preview_route": "/specimens/candidates/003-hero-object",
+        "pr": 6
+      },
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation",
+      "reuse_rule": "Use only as a mechanic study until Alex reviews it.",
+      "tags": [
+        "candidate",
+        "not-user-approved"
+      ]
+    },
+    {
+      "id": "ALE-C004",
+      "name": "Chapter Interaction Engine",
+      "category": [
+        "storytelling",
+        "chapter-system",
+        "press-hold",
+        "scene-transition"
+      ],
+      "origin": "derived mechanic",
+      "reference": "The Symphony of Vines",
+      "implementation": {
+        "branch": "candidate-specimens-batch-01",
+        "path": "components/specimens/chapter-interaction-engine.tsx",
+        "preview_route": "/specimens/candidates/004-chapter-engine",
+        "pr": 6
+      },
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation",
+      "reuse_rule": "Use only as a mechanic study until Alex reviews it.",
+      "tags": [
+        "candidate",
+        "not-user-approved"
+      ]
+    },
+    {
+      "id": "ALE-C005",
+      "name": "Editorial Release System",
+      "category": [
+        "editorial-layout",
+        "hierarchy",
+        "dense-information"
+      ],
+      "origin": "derived mechanic",
+      "reference": "Shopify Editions Spring ’26",
+      "implementation": {
+        "branch": "candidate-specimens-batch-01",
+        "path": "components/specimens/editorial-release-system.tsx",
+        "preview_route": "/specimens/candidates/005-editorial-release",
+        "pr": 6
+      },
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation",
+      "reuse_rule": "Use only as a mechanic study until Alex reviews it.",
+      "tags": [
+        "candidate",
+        "not-user-approved"
+      ]
+    },
+    {
+      "id": "ALE-C006",
+      "name": "Navigable Micro-World",
+      "category": [
+        "navigation",
+        "spatial-ui",
+        "keyboard-control",
+        "game-like"
+      ],
+      "origin": "derived mechanic",
+      "reference": "Bruno Simon",
+      "implementation": {
+        "branch": "candidate-specimens-batch-01",
+        "path": "components/specimens/navigable-micro-world.tsx",
+        "preview_route": "/specimens/candidates/006-micro-world",
+        "pr": 6
+      },
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation",
+      "reuse_rule": "Use only as a mechanic study until Alex reviews it.",
+      "tags": [
+        "candidate",
+        "not-user-approved"
+      ]
+    },
+    {
+      "id": "ALE-C007",
+      "name": "Data → Geometry Explorer",
+      "category": [
+        "data-visualisation",
+        "canvas",
+        "guided-exploration"
+      ],
+      "origin": "derived mechanic",
+      "reference": "Every Neuron, Every Connection",
+      "implementation": {
+        "branch": "candidate-specimens-batch-01",
+        "path": "components/specimens/data-geometry-explorer.tsx",
+        "preview_route": "/specimens/candidates/007-data-geometry",
+        "pr": 6
+      },
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation",
+      "reuse_rule": "Use only as a mechanic study until Alex reviews it. Real production use should be driven by meaningful structured data.",
+      "tags": [
+        "candidate",
+        "not-user-approved"
+      ]
+    }
+  ]
+}

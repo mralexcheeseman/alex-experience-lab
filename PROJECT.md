@@ -394,3 +394,28 @@ Important:
 This means high fidelity to the interaction grammar and pacing — Enter → chapters → one interaction per chapter → cinematic transitions → skip/recovery → end/restart — while using original Alex content, imagery, typography choices and visual assets.
 
 Do not reinterpret this as a generic “inspired by Symphony” landing page.
+
+
+## User-approved direction anchor — The Long View
+
+Canonical reference:
+- `docs/references/user-approved/001-the-long-view.md`
+
+Source:
+- v0 WIP: https://v0.app/mralexcheeseman-3115s-projects/chat/ctDFk8VlpHN
+- Vercel project: `luminary`
+- live: https://luminary-iota-amber.vercel.app
+
+Alex explicitly described this WIP as **cool** and **in the right direction**.
+
+Treat this as a higher-confidence taste anchor than assistant-generated synthesis directions.
+
+Current positive signals:
+- immersive experience before interface
+- strong editorial typography
+- sparse copy
+- minimal conventional UI chrome
+- one dominant full-screen visual field
+- deliberate entry threshold
+
+Do not copy the exact site wholesale. Extract and test the underlying principles as specimens.

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from "motion/react";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+import type { MotionValue } from "motion/react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./quotes.module.css";
 
 type Quote = { id: string; text: string; emphasis: string; source: "note" | "mine" };
@@ -29,7 +30,7 @@ const treatments: { id: Treatment; name: string; idea: string; glyph: string }[]
   { id: "kinetic", name: "Kinetic emphasis", idea: "A thought lands on one word.", glyph: "Aa" },
   { id: "words", name: "Word by word", idea: "Meaning gathers in sequence.", glyph: "•••" },
   { id: "mask", name: "Mask reveal", idea: "Language rises into view.", glyph: "▰" },
-  { id: "editorial", name: "Editorial scroll", idea: "A composed, measured entrance.", glyph: "↟" },
+  { id: "editorial", name: "Editorial scroll", idea: "A composition that follows the page.", glyph: "↟" },
   { id: "depth", name: "Subtle depth", idea: "A little space follows your hand.", glyph: "◌" },
   { id: "stroke", name: "Accent stroke", idea: "A human mark finishes the line.", glyph: "〰" },
 ];
@@ -58,6 +59,7 @@ function TreatmentText({
   reduced,
   depthX,
   depthY,
+  editorialY,
 }: {
   quote: Quote;
   treatment: Treatment;
@@ -66,6 +68,7 @@ function TreatmentText({
   reduced: boolean;
   depthX: ReturnType<typeof useSpring>;
   depthY: ReturnType<typeof useSpring>;
+  editorialY: MotionValue<number>;
 }) {
   const words = quoteWords(quote.text);
   const duration = 0.85 / speed;
@@ -129,16 +132,17 @@ function TreatmentText({
 
   if (treatment === "editorial") {
     return (
-      <motion.div
-        className={styles.editorialComposition}
-        initial={reduced ? false : { opacity: 0, y: distance * 1.4 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.05 / speed, ease }}
-      >
-        <motion.div className={styles.editorialRule} initial={reduced ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9 / speed, ease }} />
-        <p className={styles.editorialIndex}>ALEX CHEESEMAN / THOUGHTS</p>
-        <h2 className={`${styles.quoteText} ${styles.editorialText}`}>{quote.text}</h2>
-        <p className={styles.editorialEnd}>A NOTE TO KEEP <span>↗</span></p>
+      <motion.div className={styles.editorialComposition} style={reduced ? undefined : { y: editorialY }}>
+        <motion.div
+          initial={reduced ? false : { opacity: 0, y: distance * 1.4 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.05 / speed, ease }}
+        >
+          <motion.div className={styles.editorialRule} initial={reduced ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9 / speed, ease }} />
+          <p className={styles.editorialIndex}>ALEX CHEESEMAN / THOUGHTS</p>
+          <h2 className={`${styles.quoteText} ${styles.editorialText}`}>{quote.text}</h2>
+          <p className={styles.editorialEnd}>A NOTE TO KEEP <span>↗</span></p>
+        </motion.div>
       </motion.div>
     );
   }
@@ -202,10 +206,15 @@ function Preview({ quote, treatment, theme, format, speed, intensity, playhead }
   const rawY = useMotionValue(0);
   const depthX = useSpring(rawX, { stiffness: 75, damping: 20 });
   const depthY = useSpring(rawY, { stiffness: 75, damping: 20 });
+  const stageRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: stageRef, offset: ["start end", "end start"] });
+  const scrollRange = (format === "web" ? 8 : 20) * intensity;
+  const editorialY = useTransform(scrollYProgress, [0, 1], [scrollRange, -scrollRange]);
 
   return (
     <div className={styles.previewSpace}>
       <div
+        ref={stageRef}
         className={styles.stageFrame}
         data-theme={theme}
         data-format={format}
@@ -227,7 +236,7 @@ function Preview({ quote, treatment, theme, format, speed, intensity, playhead }
               initial={false}
               exit={reduced ? undefined : { opacity: 0, transition: { duration: 0.18 } }}
             >
-              <TreatmentText quote={quote} treatment={treatment} speed={speed} intensity={intensity} reduced={reduced} depthX={depthX} depthY={depthY} />
+              <TreatmentText quote={quote} treatment={treatment} speed={speed} intensity={intensity} reduced={reduced} depthX={depthX} depthY={depthY} editorialY={editorialY} />
             </motion.div>
           </AnimatePresence>
         </div>

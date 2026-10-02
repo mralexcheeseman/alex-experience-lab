@@ -18,7 +18,7 @@ A configurable, typography-led quote stage with a single active treatment at a t
 1. **Kinetic emphasis:** sequential word entrance with one accented word.
 2. **Word by word:** paced word entrance with restrained blur.
 3. **Mask reveal:** a line lifts through a clipping window.
-4. **Editorial scroll:** an indexed composition rises as a unit.
+4. **Editorial scroll:** an indexed composition rises on entry, then shifts subtly with page scroll.
 5. **Subtle depth:** pointer movement shifts text within a shallow spatial echo.
 6. **Accent stroke:** a drawn line closes the composition.
 

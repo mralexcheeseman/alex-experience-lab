@@ -218,6 +218,24 @@
       ]
     },
     {
+      "id": "ALE-C008",
+      "name": "Quote Motion Stage",
+      "category": ["editorial-typography", "motion", "quote-composition", "responsive-canvas"],
+      "origin": "Alex-requested original experiment",
+      "reference_doc": "docs/briefs/quote-lab.md",
+      "implementation": {
+        "branch": "feat/quote-motion-lab",
+        "path": "app/quotes/quote-lab.tsx",
+        "preview_route": "/quotes"
+      },
+      "defining_behaviour": ["six selectable typography-led treatments", "light and dark canvases", "16:9, 4:5 and 9:16 previews", "speed and intensity controls", "reduced-motion static state"],
+      "status": "candidate",
+      "build_eligibility": "internal_experiments_only",
+      "licence": "original implementation, using the project's existing Motion dependency",
+      "reuse_rule": "Review with Alex before extracting or promoting individual treatments.",
+      "tags": ["candidate", "user-requested", "not-user-approved"]
+    },
+    {
       "id": "ALR-001",
       "name": "The Long View / Luminary",
       "category": [

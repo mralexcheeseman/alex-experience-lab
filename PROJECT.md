@@ -1,5 +1,9 @@
 # Alex Experience Lab — Source of Truth
 
+## Scoped request — Quote Lab (2 October 2026)
+
+Alex asked for a Vercel-hosted laboratory for his own short thoughts, with six restrained typography-led animation treatments and controls for canvas, aspect ratio, speed and intensity. This is a self-contained study at `/quotes`, not a promotion of the Lab's unreviewed specimen or synthesis work. Its purpose is to test six original, reusable motion grammars against the same words. The live Lab direction and existing review gates remain as recorded below. See `docs/briefs/quote-lab.md` for the brief and provenance.
+
 ## Original objective
 
 Build something exquisite in Vercel by curating, combining and learning from exceptional React, motion and WebGL elements.

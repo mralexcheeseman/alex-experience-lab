@@ -60,8 +60,7 @@
 .stageFrame[data-theme="dark"] { --stage-bg: #1d211e; --stage-fg: #eeece3; --stage-muted: #929b91; --stage-accent: #d8a66f; }
 .stageFrame[data-format="instagram"] { width: min(100%, 440px); aspect-ratio: 4 / 5; }
 .stageFrame[data-format="tiktok"] { width: min(100%, 325px); aspect-ratio: 9 / 16; }
-.stageTop,.stageBottom { display: flex; align-items: center; justify-content: space-between; gap: 15px; font-size: clamp(7px, .65vw, 9px); line-height: 1.2; letter-spacing: .19em; color: var(--stage-muted); white-space: nowrap; }
-.stageBottom { margin-top: auto; }
+.stageTop { display: flex; align-items: center; justify-content: space-between; gap: 15px; font-size: clamp(7px, .65vw, 9px); line-height: 1.2; letter-spacing: .13em; color: var(--stage-muted); white-space: nowrap; }
 .stageCenter { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; padding: 15px 5%; }
 .motionLayer { width: 100%; position: relative; }
 .quoteText { font: 400 clamp(33px, 3.7vw, 64px)/1.04 Georgia, 'Times New Roman', serif; letter-spacing: -.058em; margin: 0; max-width: 12.5ch; text-wrap: balance; }
@@ -174,7 +173,7 @@
   .stageFrame[data-format="web"] .accentStroke { height: 16px; margin-top: 0; }
   .stageFrame[data-format="web"] .handwrittenNote { display: none; }
   .stageCenter { padding: 12px 3%; }
-  .stageTop,.stageBottom { font-size: 7px; }
+  .stageTop { font-size: 7px; }
   .previewFooter { padding: 15px 18px; }
   .previewFooter > div { display: block; }
   .previewFooter > div span { display: block; margin-top: 3px; }

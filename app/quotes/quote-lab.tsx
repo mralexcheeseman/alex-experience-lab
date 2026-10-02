@@ -227,7 +227,7 @@ function Preview({ quote, treatment, theme, format, speed, intensity, playhead }
         }}
         onPointerLeave={() => { rawX.set(0); rawY.set(0); }}
       >
-        <div className={styles.stageTop}><span>AC / QUOTE STUDIES</span><span>NO. 0{treatments.findIndex((item) => item.id === treatment) + 1}</span></div>
+        <div className={styles.stageTop}><span>AC / Quotes to think about</span><span>NO. 0{treatments.findIndex((item) => item.id === treatment) + 1}</span></div>
         <div className={styles.stageCenter}>
           <AnimatePresence mode="wait">
             <motion.div
@@ -240,7 +240,6 @@ function Preview({ quote, treatment, theme, format, speed, intensity, playhead }
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className={styles.stageBottom}><span>WORDS / IN MOTION</span><span>© AC</span></div>
       </div>
     </div>
   );

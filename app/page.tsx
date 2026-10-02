@@ -21,6 +21,12 @@ const studies = [
     title: "Rhythm",
     copy: "Motion that explains hierarchy instead of decorating it.",
   },
+  {
+    index: "04",
+    title: "Quote Lab",
+    copy: "Six restrained ways to give a short thought its own rhythm.",
+    href: "/quotes",
+  },
 ];
 
 function Study({
@@ -126,7 +132,7 @@ export default function Home() {
       <section className="studies shell">
         <div className="section-head">
           <span>SELECTED STUDIES</span>
-          <span>001—003</span>
+          <span>001—004</span>
         </div>
         <div className="study-list">
           {studies.map((study) => (

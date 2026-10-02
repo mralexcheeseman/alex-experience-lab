@@ -1,5 +1,9 @@
 # Alex Experience Lab — Canonical Index
 
+## Current scoped build
+
+`/quotes` is Alex's quote animation laboratory, requested 2 October 2026. The implementation brief, six motion grammar definitions and provenance are recorded in `docs/briefs/quote-lab.md`. Its candidate asset is `ALE-C008` in `data/library-assets.json`.
+
 This file answers one question: **where is the truth for each part of the project?**
 
 Read this before substantial work.
